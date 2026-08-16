@@ -1,0 +1,18 @@
+{
+	"name": "cashing-strategies",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+  "type": "module",
+	"scripts": {
+		"dev": "node --env-file=.env --watch app.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^5.2.1",
+		"mongoose": "^9.9.2",
+		"redis": "^6.2.1"
+	}
+}
