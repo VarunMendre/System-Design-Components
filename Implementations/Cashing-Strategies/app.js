@@ -5,6 +5,8 @@ import cacheRouter from "./redis-strategies/cache-aside/routes.js";
 import invalidationRouter from "./redis-strategies/cache-invalidation/routes.js";
 import ttlCacheRouter from "./redis-strategies/ttl-cache/routes.js";
 import writeThroughRouter from "./redis-strategies/write-through/routes.js";
+import writeBehindRouter from "./redis-strategies/write-behind/routes.js";
+
 
 const PORT = 4000;
 const app = express();
@@ -26,6 +28,9 @@ app.use("/api/ttl-cache", ttlCacheRouter);
 
 // Strategy #4
 app.use("/api/write-through", writeThroughRouter);
+
+// Strategy #5
+app.use("/api/write-behind", writeBehindRouter);
 
 app.listen(PORT, () => {
   console.log("Server Started on port:", PORT);
