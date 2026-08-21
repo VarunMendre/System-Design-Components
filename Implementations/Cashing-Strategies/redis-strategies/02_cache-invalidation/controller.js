@@ -1,7 +1,6 @@
 import crypto from "crypto";
 import Task from "../../schema.js";
-import { getCache, setCache } from "../cache-aside/cache.js";
-import { invalidateTodosCache } from "./cache.js";
+import { invalidateTodosCache, getCache, setCache } from "./cache.js";
 
 export const createInvalidationTodo = async (req, res, next) => {
   const { title, description, isCompleted, priority, dueDate } = req.body;

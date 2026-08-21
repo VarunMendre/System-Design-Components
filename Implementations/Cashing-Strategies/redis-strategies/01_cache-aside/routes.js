@@ -1,8 +1,8 @@
 import express from "express";
 import { getAllTodosWithCache } from "./controller.js";
 
-const cacheRouter = express.Router();
+const router = express.Router();
 
-cacheRouter.get("/todos", getAllTodosWithCache);
+router.get("/todos", getAllTodosWithCache);
 
-export default cacheRouter;
+export default router;
